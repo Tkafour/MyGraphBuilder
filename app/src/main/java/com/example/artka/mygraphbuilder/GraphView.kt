@@ -39,9 +39,12 @@ class GraphView(context: Context, attributeSet: AttributeSet) : View(context, at
         canvas.drawPath(path, linePaint)
         canvas.drawLine(50F, 500F, 500F, 500F, linePaint)
 
-        for (i in 1..9) {
-            canvas.drawLine(50F*i, 480F, 50F*i, 520F, linePaint)
-            canvas.drawLine(30F, 500F-(50F*i), 70F, 500F-(50F*i), linePaint)
+        for (i in 1.rangeTo(xDividerAmount)) {
+            canvas.drawLine(xDividerInterval*i, 480F, xDividerInterval*i, 520F, linePaint)
+        }
+
+        for (i in 1.rangeTo(yDividerAmount)) {
+            canvas.drawLine(30F, 500F-(yDividerInterval*i), 70F, 500F-(yDividerInterval*i), linePaint)
         }
 
     }

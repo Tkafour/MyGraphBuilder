@@ -22,5 +22,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         graph_view.setData(myPath)
+        graph_view.setXDivider(50, 10)
+        graph_view.setYDivider(75, 8)
     }
 }
